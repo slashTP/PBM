@@ -1,6 +1,6 @@
 # PBM v1
 ## Versão **ANTIGA** do BOT do Python Brasil;
-Essa versão do BOT *é antiga, e provavelmente não está recebendo novas funcionalidades mais. No entanto isso não quer dizer que fixes ocorram.*
+Essa versão do BOT *é antiga, e provavelmente não está recebendo novas funcionalidades mais. No entanto isso não quer dizer que fixes não ocorram.*
 
 Caso esteja procurando a nova versão do BOT (PBM v2), você irá encontrá-lo [aqui!](https://github.com/slashTP/PBM-v2)
 
