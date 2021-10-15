@@ -58,7 +58,7 @@ async def on_message(message):
     cmdCanal = bot.get_channel(bot.canais["comandos"])
     
     if message.content.lower().startswith('.'):
-        if message.channel.id == cmdCanal.id or cargo in message.author.roles:
+        if message.channel.id == cmdCanal.id or cargo in message.author.roles or message.channel.id == bot.canais["verificar"]:
             # Comando no canal correto;
             await bot.process_commands(message)
         else:
