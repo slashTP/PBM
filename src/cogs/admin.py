@@ -13,7 +13,7 @@ class Admin(commands.Cog):
 
     @commands.command()
     async def say(self, ctx, txt = None):
-        if txt not None:
+        if txt != None:
             await ctx.send(txt)
         else:
             await ctx.send(f":x: | {ctx.author.mention}, você não disse algo para eu repetir!")
