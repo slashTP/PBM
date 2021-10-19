@@ -12,14 +12,14 @@ class Admin(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def say(self, ctx, txt = None):
+    async def say(self, ctx, *, txt = None):
         if txt != None:
             await ctx.send(txt)
         else:
             await ctx.send(f":x: | {ctx.author.mention}, você não disse algo para eu repetir!")
         
     @commands.command()
-    async def sayembed(self, ctx, ti = None, txt = None):
+    async def sayembed(self, ctx, ti = None, *, txt = None):
         if ti is None: 
             await ctx.send(f"{ctx.author.mention}, você não inseriu um título!")
             return
