@@ -12,8 +12,20 @@ class Admin(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def say(self, ctx):
-        await ctx.send(ctx.message.content[4:])
+    async def say(self, ctx, txt = None):
+        if txt not None:
+            await ctx.send(txt)
+        else:
+            await ctx.send(f":x: | {ctx.author.mention}, você não disse algo para eu repetir!")
+        
+    @commands.command()
+    async def sayembed(self, ctx, ti = None, txt = None):
+        if ti is None: await ctx.send(f"{ctx.author.mention}, você não inseriu um título!")
+        if txt is None: await ctx.send(f"{ctx.author.mention}, você não inseriu uma descrição!")
+        
+        embed = discord.Embed(title=ti, description=txt, color=0x00ff00)
+        await ctx.send(embed=embed)
+        await ctx.message.delete()
 
     # Membro Entrou
     @commands.Cog.listener()
